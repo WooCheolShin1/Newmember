@@ -12,14 +12,16 @@
       background-size: cover;
     }
 
-    main {
-      border: 5px solid red;
+    .new {
+      border: 5px;
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 35rem;
       height: auto;
       padding: 30px;
+      margin: 0 auto;
+      border: 1px solid blue;
     }
 
     fieldset {
@@ -33,11 +35,12 @@
     }
 
     button {
-      border: 5px solid green;
+      border: 1px solid green;
       cursor: pointer;
-      width: 10rem;
-      height: 3rem;
+      width: 8rem;
+      height: 1.5rem;
       margin-top: 20px;
+      
     }
 
     /* button:active {
@@ -49,23 +52,36 @@
       color: red;
     }
 
-    input {
+    .row{
+      flex-direction: row;
+    }
+
+    .emailsize{
+      width: 50%;
+    }
+
+     input {
       border: 1px solid blue;
-      width: 15rem;
       height: 20px;
       margin: 10px;
     }
   </style>
   <body>
-    <main>
-      <input type="text" id="username" placeholder="아이디" />
+    <div class="new">
+      <input type="text" id="username" placeholder="아이디"/>
       <input type="password" id="userpassword" placeholder="비밀번호" />
-      <input type="password" id="userpassword2" placeholder="비밀번호 확인" />
-      <input type="email" id="useremail" placeholder="이메일" />
-      <input type="tel" id="userphone" placeholder="전화번호" />
-      <!-- <input type="radio" name="usergender"value="male" />남
-      <input type="radio" value="female" />여 -->
+      <input type="password" id="userpassword2" placeholder="비밀번호 확인" class="size" />
+      <input type="email" id="useremail" placeholder="이메일" class="emailsize" />
+      <input type="tel" id="userphone" placeholder="전화번호">
+      <div class="row">
+        <input type="" id="userjoin" placeholder="인증번호">
+        <button>인증번호 발송</button>
+      </div>
+      <div class="row">
+        <input type="radio" name="usergender" value="male">남
+        <input type="radio" name="usergender" value="female">여
+      </div>
       <button>회원가입</button>
-    </main>
+    </div>
   </body>
 </html>
